@@ -28,7 +28,7 @@ function App() {
                 setCocktails([]);
             }
         };
-        console.log(cocktails);
+
         fetchDrinks();
     }, []);
 
