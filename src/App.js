@@ -2,38 +2,35 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-    const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+    const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
     const [cocktails, setCocktails] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('margarita');
-
-    const fetchDrinks = async () => {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        const { drinks } = data;
-        if (drinks) {
-            const newCocktails = drinks.map((item) => {
-                const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } = item;
-
-                return {
-                    id: idDrink,
-                    name: strDrink,
-                    image: strDrinkThumb,
-                    info: strAlcoholic,
-                    glass: strGlass,
-                };
-            });
-            setCocktails(newCocktails);
-        } else {
-            setCocktails([]);
-            setSearchTerm('Margarita');
-        }
-        console.log(cocktails);
-    };
 
     useEffect(() => {
+        const fetchDrinks = async () => {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const { drinks } = data;
+            if (drinks) {
+                const newCocktails = drinks.map((item) => {
+                    const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } = item;
+
+                    return {
+                        id: idDrink,
+                        name: strDrink,
+                        image: strDrinkThumb,
+                        info: strAlcoholic,
+                        glass: strGlass,
+                    };
+                });
+                setCocktails(newCocktails);
+            } else {
+                setCocktails([]);
+            }
+        };
+        console.log(cocktails);
         fetchDrinks();
-    }, [searchTerm]);
+    }, []);
 
     return (
         <div className="App">
