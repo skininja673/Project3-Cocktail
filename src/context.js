@@ -11,7 +11,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
     return (
         <>
-            <AppContext.Provider value="hello">
+            <AppContext.Provider value="error">
                 {children}
                 <CocktailList />
             </AppContext.Provider>
