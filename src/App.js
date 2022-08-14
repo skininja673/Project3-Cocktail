@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
     const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
