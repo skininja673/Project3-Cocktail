@@ -226,16 +226,9 @@ html {
 
 /*=====Variables======*/
 :root {
-    --primaryLightColor: #d4e6a5;
-    --primaryColor: #476a2e;
-    --primaryDarkColor: #c02c03;
+    --primaryColor: #cd7300;
     --mainWhite: #fff;
-    --offWhite: #f7f7f7;
     --mainBackground: #f1f5f8;
-    --mainBlack: #222;
-    --mainGrey: #ececec;
-    --darkGrey: #afafaf;
-    --mainRed: #bd0303;
 }
 
 /* ====== Global Styles ======  */
@@ -246,7 +239,6 @@ html {
 
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-    color: var(--mainBlack);
     background: var(--mainBackground);
     line-height: 1.4;
     font-size: 1rem;
@@ -410,7 +402,122 @@ img {
     }
 }
 
+/* cocktail */
+.cocktails-center {
+    /* border: 4px solid green; */
+    max-width: 1200;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cocktail {
+    /* border: 9px solid red; */
+    margin-bottom: 2rem;
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    margin: 20px 15px;
+
+    /* width: 200px; */
+}
+.cocktail:hover {
+    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cocktail img {
+    height: 20rem;
+    border-radius: 10px;
+}
+
+.cocktail-footer {
+    padding: 1.4rem;
+}
+.cocktail-footer h3,
+.cocktail-footer h4,
+.cocktail-footer p {
+    margin-bottom: 0.3rem;
+}
+.cocktail-footer p {
+    /* border: 2px solid magenta; */
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* form styling */
+.search {
+    margin: 50px 0px;
+}
+.search-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    text-transform: capitalize;
+    border-radius: 20px;
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.form-control label {
+    /* border: 2px solid red; */
+    width: 100%;
+    font-size: 1.4rem;
+    display: inline-block;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primaryColor);
+}
+.form-control input {
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 15px 0px;
+    border-radius: 20px;
+    border: 2px solid var(--primaryColor);
+}
+
 /* misc */
 .title {
     text-align: center;
+    color: var(--primaryColor);
+    text-transform: capitalize;
+}
+
+/* button */
+.btn {
+    text-transform: uppercase;
+    color: var(--primaryColor);
+    font-size: 1.3rem;
+    border: 2px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    margin-top: 13px;
+    font-weight: 400;
+}
+
+.btn:hover {
+    color: var(--primaryColor);
+    background-color: var(--mainWhite);
+}
+
+/* media query */
+@media (max-width: 540px) {
+    .search-form {
+        width: 90%;
+    }
+    .cocktails-center {
+        width: 90%;
+    }
+    .cocktail {
+        min-width: 100%;
+    }
+    .btn {
+        /* border: 2px solid magenta; */
+        font-size: 1rem;
+
+        /* padding-left: 0px; */
+    }
 }
