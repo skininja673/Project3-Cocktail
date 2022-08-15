@@ -526,9 +526,9 @@ img {
     margin-top: 10px;
 }
 .drink-info {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     text-transform: capitalize;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 /* media query */
