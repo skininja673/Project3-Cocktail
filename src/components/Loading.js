@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 const Loading = () => {
- return (
-  <div className="loader">
-  </div>
- )
-}
+    return (
+        <div className="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    );
+};
 
-export default Loading
+export default Loading;
