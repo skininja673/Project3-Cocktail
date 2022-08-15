@@ -503,6 +503,8 @@ img {
     background-color: var(--mainWhite);
 }
 
+/* single cocktail */
+
 /* media query */
 @media (max-width: 540px) {
     .search-form {
