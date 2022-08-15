@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import Cocktail from './Cocktail';
 import Loading from './Loading';
 
