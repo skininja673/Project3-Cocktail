@@ -326,10 +326,10 @@ img {
 .lds-roller {
     display: inline-block;
     position: relative;
-    width: 80px;
-    height: 80px;
-    left: 50%;
-    top: 180px;
+    width: 100px;
+    height: 100px;
+    left: 46%;
+    top: 200px;
 }
 .lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -342,7 +342,7 @@ img {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: green;
+    background: var(--primaryColor);
     margin: -4px 0 0 -4px;
 }
 .lds-roller div:nth-child(1) {

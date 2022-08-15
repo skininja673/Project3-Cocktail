@@ -8,6 +8,8 @@ const CocktailList = () => {
     //accessing the cocktails and loading state send by provider from  context.js
     const { cocktails, loading } = useContext(AppContext);
 
+    console.log('COCKTAILS: ', cocktails);
+
     //if loading is true, render Loading component (animation circle)
     if (loading) {
         return <Loading />;
@@ -18,7 +20,7 @@ const CocktailList = () => {
         return <h2 className="title">No cocktails matched </h2>;
     }
 
-    return <h1>oh</h1>;
+    return <h1> rendering Cocktail List</h1>;
 };
 
 export default CocktailList;
