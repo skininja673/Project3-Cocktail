@@ -59,7 +59,7 @@ const AppProvider = ({ children }) => {
 
     return (
         <>
-            <AppContext.Provider value={{ loading, cocktails, setSearchTerm }}>{children}</AppContext.Provider>
+            <AppContext.Provider value={{ loading, cocktails, setSearchTerm, searchTerm }}>{children}</AppContext.Provider>
         </>
     );
 };
