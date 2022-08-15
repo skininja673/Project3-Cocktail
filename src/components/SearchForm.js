@@ -1,10 +1,4 @@
-import React, { useContext } from 'react';
-// import { useGlobalContext } from '../context'
-import { AppContext } from '../context';
-
-const SearchForm = () => {
-    const { setSearchTerm } = useContext(AppContext);
-
+const SearchForm = ({ setSearchTerm, searchTerm }) => {
     //every time user type new drink, this function will set setSearchTerm to a new value;
     const searchCocktail = (e) => {
         setSearchTerm(e.target.value);

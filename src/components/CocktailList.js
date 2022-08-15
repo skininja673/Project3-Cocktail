@@ -1,14 +1,8 @@
 import React, { useContext } from 'react';
 import Cocktail from './Cocktail';
 import Loading from './Loading';
-// import { useGlobalContext } from '../context'
-import { AppContext } from '../context';
 
-const CocktailList = () => {
-    //accessing the cocktails and loading state send by provider from  context.js
-    const { cocktails, loading } = useContext(AppContext);
-    // console.log('COCKTAILS: ', cocktails);
-
+const CocktailList = ({ loading, cocktails }) => {
     //if loading is true, render Loading component (animation circle)
     if (loading) {
         return <Loading />;

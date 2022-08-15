@@ -1,17 +1,17 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Loading from '../components/Loading';
 import { useParams, Link } from 'react-router-dom';
+
+//hitting end point based on drink id
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
 
 const SingleCocktail = () => {
+    //accessing id using useParams()
     const { id } = useParams();
-    const [loading, setLoading] = useState(false);
     const [cocktail, setCocktail] = useState(null);
 
     // call this api, only when we have 'id' available
     useEffect(() => {
-        setLoading(true);
         async function getCocktail() {
             try {
                 const response = await fetch(`${url}${id}`);
@@ -45,9 +45,8 @@ const SingleCocktail = () => {
                 } else {
                     setCocktail(null);
                 }
-                setLoading(false);
-            } catch {
-                setLoading(false);
+            } catch (err) {
+                console.log(err);
             }
         }
 

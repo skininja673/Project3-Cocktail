@@ -7,6 +7,7 @@ import SingleCocktail from './pages/SingleCocktail';
 import Error from './pages/Error';
 // import components
 import Navbar from './components/Navbar';
+
 function App() {
     return (
         <div>
@@ -24,7 +25,3 @@ function App() {
 }
 
 export default App;
-
-/**
- * I setup the router in index.js, which wraps our whole app in index.js
- */
