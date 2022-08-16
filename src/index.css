@@ -485,6 +485,25 @@ img {
     color: var(--primaryColor);
     text-transform: capitalize;
 }
+.nav-links li {
+    /* border: 2px solid red; */
+    position: relative;
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+.nav-links li::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 40%;
+    background: transparent;
+    transition: width 0.4s ease, background 0.4s ease;
+}
+.nav-links li:hover:after {
+    width: 100%;
+    background: var(--primaryColor);
+}
 
 /* BUTTON */
 .btn {
