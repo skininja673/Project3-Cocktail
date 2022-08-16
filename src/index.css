@@ -224,14 +224,14 @@ html {
 
 /* end of setup */
 
-/*=====Variables======*/
+/* VARIABLES */
 :root {
     --primaryColor: #cd7300;
     --mainWhite: #fff;
     --mainBackground: #f1f5f8;
 }
 
-/* ====== Global Styles ======  */
+/* GLOBAL STYLING */
 * {
     margin: 0;
     padding: 0;
@@ -302,15 +302,20 @@ img {
 
 /* ABOUT */
 .about-section {
-    /* border: 2px solid red; */
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 800px;
+    width: 80%;
+    min-height: 160px;
+
+    margin: 50px auto;
     text-align: center;
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--mainBackground);
 }
 .about-section p {
     line-height: 2rem;
     font-weight: 400;
     letter-spacing: 2px;
+    font-size: 1.4rem;
 }
 
 /* LOADING ANIMATION */
@@ -404,7 +409,6 @@ img {
 
 /* COCKTAIL */
 .cocktails-center {
-    /* border: 4px solid green; */
     max-width: 1200;
     width: 80%;
     margin: 0 auto;
@@ -413,7 +417,6 @@ img {
     justify-content: space-around;
 }
 .cocktail {
-    /* border: 9px solid red; */
     margin-bottom: 2rem;
     box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
     margin: 20px 15px;
@@ -436,7 +439,6 @@ img {
     margin-bottom: 0.3rem;
 }
 .cocktail-footer p {
-    /* border: 2px solid magenta; */
     font-size: 1.3rem;
     font-weight: 400;
 }
@@ -455,7 +457,6 @@ img {
 }
 
 .form-control label {
-    /* border: 2px solid red; */
     width: 100%;
     font-size: 1.4rem;
     display: inline-block;
@@ -472,6 +473,10 @@ img {
     margin: 15px 0px;
     border-radius: 20px;
     border: 2px solid var(--primaryColor);
+}
+.form-control input:focus {
+    outline: none;
+    border: 2px solid #ff9100;
 }
 
 /* MISC */
@@ -503,17 +508,15 @@ img {
 
 /* SINGLE COCKTAIL */
 .sc-container {
-    /* border: 3px solid magenta; */
     max-width: 500px;
-    margin: 50px auto;
-    padding: 20px 10px;
+    margin: 8px auto;
+    padding: 20px 10px 7px 10px;
     box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 }
 .sc-container .sc-btn {
     margin-top: 30px;
 }
 .sc-title {
-    /* border: 2px solid green; */
     margin-top: 20px;
 }
 .sc-drink img {
@@ -521,7 +524,7 @@ img {
     border-radius: 15px;
 }
 .drink-detail {
-    margin-top: 30px;
+    margin-top: 8px;
 }
 
 .drink-detail p {
@@ -530,7 +533,6 @@ img {
 }
 
 .drink-info {
-    /* border: 2px solid red; */
     text-transform: capitalize;
     font-weight: 700;
     background-color: var(--primaryColor);
@@ -546,9 +548,16 @@ img {
     text-align: center;
     min-height: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    max-width: 800px;
+    width: 80%;
+    min-height: 160px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--mainBackground);
 }
 .error-btn {
     font-size: 1.2rem;
