@@ -8,14 +8,21 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
     //we set search term to 'a' in order to display some cocktails, that has letter 'a' in it
     const [searchTerm, setSearchTerm] = useState('a');
+    // const [searchTerm, setSearchTerm] = useState(localStorage.getItem('userChoice'));
     const [cocktails, setCocktails] = useState([]);
 
     //calling api
-
     // every time the searchTerm changes, then call the api
     useEffect(() => {
+        if (localStorage.getItem('userChoice')) {
+            console.log('user search teerm', localStorage.getItem('userChoice'));
+
+            setSearchTerm(localStorage.getItem('userChoice'));
+        }
+
         const fetchDrinks = async () => {
             setLoading(true);
+
             try {
                 const response = await fetch(`${url}${searchTerm}`);
                 const data = await response.json();

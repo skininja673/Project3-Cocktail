@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className="nav-center">
                 <ul className="nav-links">
                     <li>
-                        <Link to="/" className="top-links">
+                        <Link to="/" className="top-links" onClick={() => localStorage.setItem('userChoice', 'a')}>
                             Home
                         </Link>
                     </li>

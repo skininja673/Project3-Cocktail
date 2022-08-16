@@ -2,6 +2,7 @@ const SearchForm = ({ setSearchTerm, searchTerm }) => {
     //every time user type new drink, this function will set setSearchTerm to a new value;
     const searchCocktail = (e) => {
         setSearchTerm(e.target.value);
+        localStorage.setItem('userChoice', e.target.value);
     };
 
     const handleSubmit = (e) => {
