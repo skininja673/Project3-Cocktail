@@ -229,6 +229,8 @@ html {
     --primaryColor: #cd7300;
     --mainWhite: #fff;
     --mainBackground: #f1f5f8;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* GLOBAL STYLING */
@@ -418,11 +420,11 @@ img {
 }
 .cocktail {
     margin-bottom: 2rem;
-    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--lightShadow);
     margin: 20px 15px;
 }
 .cocktail:hover {
-    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--darkShadow);
 }
 
 .cocktail img {
@@ -453,7 +455,7 @@ img {
     padding: 2rem 2.5rem;
     text-transform: capitalize;
     border-radius: 20px;
-    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--lightShadow);
 }
 
 .form-control label {
@@ -486,7 +488,6 @@ img {
     text-transform: capitalize;
 }
 .nav-links li {
-    /* border: 2px solid red; */
     position: relative;
     padding-bottom: 3px;
     margin-right: 10px;
@@ -530,7 +531,7 @@ img {
     max-width: 500px;
     margin: 8px auto;
     padding: 20px 10px 7px 10px;
-    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--lightShadow);
 }
 .sc-container .sc-btn {
     margin-top: 30px;
@@ -575,11 +576,22 @@ img {
     min-height: 160px;
     margin: 50px auto;
     text-align: center;
-    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--lightShadow);
     background-color: var(--mainBackground);
 }
 .error-btn {
     font-size: 1.2rem;
+}
+
+/* FOOTER COMPONENT */
+.footer {
+    text-align: center;
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+    font-size: 2rem;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    padding: 5px 0px;
 }
 
 /* MEDIA QUERY */
