@@ -44,7 +44,7 @@ const Home = () => {
                 //once we get something back, setLoading to false
                 setLoading(false);
             } catch (err) {
-                console.log(err);
+                alert('some thing is wrong !');
 
                 //if there is any error, then setLoading to false
                 setLoading(false);

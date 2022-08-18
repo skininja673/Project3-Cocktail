@@ -46,7 +46,7 @@ const SingleCocktail = () => {
                     setCocktail(null);
                 }
             } catch (err) {
-                console.log(err);
+                alert('Something is wrong');
             }
         }
 
