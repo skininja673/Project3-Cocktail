@@ -609,3 +609,23 @@ img {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 802px) {
+    .footer {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 625px) {
+    .footer {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+@media (max-width: 504px) {
+    .footer {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
